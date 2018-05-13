@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2011
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GetThyRing", "GetThyRing\GetThyRing.csproj", "{F700B112-4810-4C8E-A494-A8BC01F70745}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer1", "DataLayer1\DataLayer1.csproj", "{999EA9EF-5329-45DA-8121-50889CDB7E01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppLayer", "AppLayer\AppLayer.csproj", "{39B26A88-1F5F-4DC2-8E55-1DF7E2084E28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F700B112-4810-4C8E-A494-A8BC01F70745}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F700B112-4810-4C8E-A494-A8BC01F70745}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F700B112-4810-4C8E-A494-A8BC01F70745}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F700B112-4810-4C8E-A494-A8BC01F70745}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999EA9EF-5329-45DA-8121-50889CDB7E01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999EA9EF-5329-45DA-8121-50889CDB7E01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999EA9EF-5329-45DA-8121-50889CDB7E01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999EA9EF-5329-45DA-8121-50889CDB7E01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39B26A88-1F5F-4DC2-8E55-1DF7E2084E28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39B26A88-1F5F-4DC2-8E55-1DF7E2084E28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39B26A88-1F5F-4DC2-8E55-1DF7E2084E28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39B26A88-1F5F-4DC2-8E55-1DF7E2084E28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F810297-2E36-44B7-B94A-BB4EB6215846}
+	EndGlobalSection
+EndGlobal
