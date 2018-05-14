@@ -7,11 +7,11 @@ namespace DataLayer1
 {
     public class Item
     {
-        public string Description { get; set; }
+        public string ItemDescription { get; set; }
         
-        public Item(string description )
+        public Item(string itemdescription )
         {
-            Description = description;
+            ItemDescription = itemdescription;
         }
     }
 }

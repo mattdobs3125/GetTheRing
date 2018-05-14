@@ -11,8 +11,8 @@ namespace AppLayer.Menu
         public MenuOption(Action choose, string des)
         {
             des = Des;
-            Choose = choose;
-             m
+            choose = Choose;
+            
         }
 
 
