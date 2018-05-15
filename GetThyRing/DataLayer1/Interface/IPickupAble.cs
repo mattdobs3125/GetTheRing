@@ -1,10 +1,27 @@
 ﻿using System;
 namespace DataLayer1.Interface
 {
-    internal interface IPickupAble
+    public interface IPickupAble
     {
-	    string Id { get; set; }
-		string Des { get; set; }
+	    
+		Action Pickup { get; set; }
+	    string PickupAble();
 
+	}
+
+
+    public class Canpickup{
+        public IPickupAble c { get; set; }
+        public string TryToPickUp(){
+            c.PickupAble();
+        }
     }
+
+
+
+
+
+
+
 }
+

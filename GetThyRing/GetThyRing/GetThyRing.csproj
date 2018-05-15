@@ -11,4 +11,8 @@
     <None Remove="Service\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer1\DataLayer1.csproj" />
+    <ProjectReference Include="..\AppLayer\AppLayer.csproj" />
+  </ItemGroup>
 </Project>

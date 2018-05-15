@@ -7,7 +7,7 @@ namespace AppLayer.Menu
     class Menui
     {
         private string Name { get; set; }
-        public List <MenuOption>  Options { get; set; }
+        private List <MenuOption>  Options { get; set; }
         public Menui(string name , List<MenuOption>options)
         {
             Name = name;

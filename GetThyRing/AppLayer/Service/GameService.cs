@@ -27,7 +27,7 @@ namespace GetThyRing
 
 
 		}
-		 public void BuildGameMenu()
+		public void BuildGameMenu()
 		{
 			GameMenu = new Menui("Game Main Menu", new List<MenuOption>
 			{

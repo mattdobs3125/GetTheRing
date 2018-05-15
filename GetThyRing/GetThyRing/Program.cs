@@ -8,7 +8,12 @@ namespace GetThyRing
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-			GameService.BuildGameMenu();
+			GameService play = new GameService();
+			while (play.Running){
+				play.GameService();
+			}
+
+            
             
             
         }
