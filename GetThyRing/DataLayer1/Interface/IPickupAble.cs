@@ -1,7 +1,10 @@
 ﻿using System;
 namespace DataLayer1.Interface
 {
-    public interface IPickupAble
+    internal interface IPickupAble
     {
+	    string Id { get; set; }
+		string Des { get; set; }
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace GetThyRing
 {
     class Program
@@ -7,6 +8,7 @@ namespace GetThyRing
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+			GameService.BuildGameMenu();
             
             
         }

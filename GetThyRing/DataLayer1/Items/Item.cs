@@ -5,7 +5,7 @@
 namespace DataLayer1
 
 {
-    public class Item
+    internal class Item
     {
         public string ItemDescription { get; set; }
         

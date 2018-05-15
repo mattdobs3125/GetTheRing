@@ -13,30 +13,45 @@ namespace GetThyRing
 		private int _itemiD { get; set; }
 		private bool GamePlaying { get; set; }
 		private bool Pausecc { get; set; }
-		public bool Runinng { get; private set; }
+		public bool Running { get; private set; }
+
 
 		public GameService()
 		{
 
-			Runinng = true;
+			Running = true;
 			GamePlaying = false;
 			Pausecc = false;
+			BuildGameMenu();
+            
+
 
 		}
-		void BuildGameMenu()
+		 public void BuildGameMenu()
 		{
-			GameMenu = new Menui("Game Menu", new List<MenuOption>
+			GameMenu = new Menui("Game Main Menu", new List<MenuOption>
 			{
-				new MenuOption (PlayGame,"Find The Ring")
+				new MenuOption (FirstLevel,"Find The Ring"),
+                new MenuOption (ExitGame, "Close the Game")
 			});
 
-
+            
 
 		}
 
-		private void PlayGame()
+		private void ExitGame()
 		{
-			throw new NotImplementedException();
+			Console.WriteLine("You've closed the program");
+			Running = false;
+		}
+
+		private void FirstLevel()
+		{
+			Console.Clear();
+            Console.WriteLine("Your in room, it's quiet and cold.  ");
+
+
+
 		}
 
 
