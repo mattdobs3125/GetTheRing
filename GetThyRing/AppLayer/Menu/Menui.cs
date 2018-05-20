@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppLayer.Menu
 {
-    class Menui
+    public class Menui
     {
         private string Name { get; set; }
         private List <MenuOption>  Options { get; set; }
@@ -13,5 +13,29 @@ namespace AppLayer.Menu
             Name = name;
             Options = options;
         }
-    }
+		void PrintGameOption(){
+			int count = 1;
+			foreach (var options in Options ){
+				Console.WriteLine($"{count++}{options.Des}{options.Choose}");
+			}
+		}
+
+		public Action Select()
+		{
+			PrintGameOption();
+			string input = Console.ReadLine();
+			int index = -1;
+			bool check = Int32.TryParse(input, out index);
+			if (!check || index<=0 || index >Options.Count)
+			{
+				Console.WriteLine("I dont know {0}",input);
+			}
+			return Options[index - 1].Choose;
+		}
+	
+	
+	
+	
+	}
+
 }

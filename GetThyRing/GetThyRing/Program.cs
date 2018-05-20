@@ -1,5 +1,5 @@
 ﻿using System;
-
+using AppLayer;
 
 namespace GetThyRing
 {
@@ -7,11 +7,13 @@ namespace GetThyRing
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
 			GameService play = new GameService();
-			while (play.Running){
-				play.GameService();
-			}
+			play.BuildGameMenu();
+			Console.Read();
+
+			       
+
 
             
             

@@ -4,9 +4,8 @@ namespace DataLayer1.Interface
 	public interface IPickupAble
 	{
 
-		Action Pickup { get; set; }
-        
+		void PickUp(IIventoryItem IventoryItem, string choose = "");
+		void Drop(IIventoryItem IventoryItem, string choose = "");
 
 	}
 }
-

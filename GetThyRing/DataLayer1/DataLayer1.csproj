@@ -9,5 +9,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Items\SpecialItem.cs" />
+    <Compile Remove="Character\Character.cs" />
+    <Compile Remove="BackPack\Pack.cs" />
+    <Compile Remove="BackPack\PackBack.cs" />
+    <Compile Remove="Interface\ISubject.cs" />
+    <Compile Remove="Interface\IPickupAble.cs" />
+    <Compile Remove="Inventory.cs" />
+    <Compile Remove="Room.cs" />
   </ItemGroup>
 </Project>
