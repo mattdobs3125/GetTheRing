@@ -9,8 +9,11 @@ namespace GetThyRing
         {
             
 			GameService play = new GameService();
-			play.BuildGameMenu();
-			Console.Read();
+			play.Setter();
+			while (play.Running){
+				play.Setter();
+			}
+           
 
 			       
 

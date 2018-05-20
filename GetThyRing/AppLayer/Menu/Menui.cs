@@ -29,6 +29,8 @@ namespace AppLayer.Menu
 			if (!check || index<=0 || index >Options.Count)
 			{
 				Console.WriteLine("I dont know {0}",input);
+				return null;
+
 			}
 			return Options[index - 1].Choose;
 		}

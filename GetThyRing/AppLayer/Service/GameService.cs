@@ -27,7 +27,7 @@ namespace GetThyRing
             
         
 
-	   public Menui BuildGameMenu()
+	   Menui BuildGameMenu()
 		{
 			return new Menui("Game Main Menu", new List<MenuOption>
 			{
@@ -36,10 +36,10 @@ namespace GetThyRing
 
 			});
 		}
-
-		void BuildFirstLevelMenu()
+        
+		public void Setter()
 		{
-			
+			BuildGameMenu();
 		}    
 
 
@@ -54,15 +54,15 @@ namespace GetThyRing
 			Console.Clear();
             Console.WriteLine("Your in room, it's quiet and cold.  ");
 		}
-
+        
         public void LevelSelection ()
 		{
 			
 
-				Action action = GameMenu.Select();
-				if (action!= null )
+				Action choose = GameMenu.Select();
+			if (choose!= null )
 				{
-					action.Invoke();
+				choose.Invoke();
 				}
 		
 		}
