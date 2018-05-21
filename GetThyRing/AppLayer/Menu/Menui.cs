@@ -16,7 +16,7 @@ namespace AppLayer.Menu
 		void PrintGameOption(){
 			int count = 1;
 			foreach (var options in Options ){
-				Console.WriteLine($"{count++}{options.Des}{options.Choose}");
+				Console.WriteLine($"{count++} {options.Des}");
 			}
 		}
 
@@ -28,10 +28,13 @@ namespace AppLayer.Menu
 			bool check = Int32.TryParse(input, out index);
 			if (!check || index<=0 || index >Options.Count)
 			{
+
+				Console.Clear();
 				Console.WriteLine("I dont know {0}",input);
 				return null;
 
 			}
+			Console.Clear();
 			return Options[index - 1].Choose;
 		}
 	

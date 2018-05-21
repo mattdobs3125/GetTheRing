@@ -9,9 +9,10 @@ namespace GetThyRing
         {
             
 			GameService play = new GameService();
-			play.Setter();
+
 			while (play.Running){
-				play.Setter();
+				play.LevelSelection();
+               
 			}
            
 

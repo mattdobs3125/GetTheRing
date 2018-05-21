@@ -32,21 +32,18 @@ namespace GetThyRing
 			return new Menui("Game Main Menu", new List<MenuOption>
 			{
 				new MenuOption (FirstLevel,"Find The Ring"),
+                
 				new MenuOption (ExitGame, "Close the Game")
 
 			});
 		}
-        
-		public void Setter()
-		{
-			BuildGameMenu();
-		}    
 
 
 		private void ExitGame()
 		{
-			Console.WriteLine("You've closed the program");
 			GamePlaying = false;
+			Console.Clear();
+            Console.WriteLine("You've closed the program");
 		}
 
 		private void FirstLevel()
@@ -57,15 +54,14 @@ namespace GetThyRing
         
         public void LevelSelection ()
 		{
-			
-
-				Action choose = GameMenu.Select();
+			Action choose = GameMenu.Select();
 			if (choose!= null )
-				{
+			{
 				choose.Invoke();
-				}
-		
+            }
 		}
+            
+       
 
 
 
