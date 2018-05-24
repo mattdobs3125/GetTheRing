@@ -6,47 +6,48 @@ using System;
 
 namespace GetThyRing
 {
-	public class GameService
-	{
-		private Menui MainMenu { get; set; }
-		private Menui GameMenu { get; set; }
-		private GameProvider _GameP = new GameProvider();
-		private int _itemiD { get; set; }
-		private bool GamePlaying { get; set; }
+    public class GameService
+    {
+        private Menui MainMenu { get; set; }
+        private Menui GameMenu { get; set; }
+        private GameProvider _GameP = new GameProvider();
+        private int _itemiD { get; set; }
+        private bool GamePlaying { get; set; }
 
-		public bool Running { get;  set; }
+        public bool Running { get;  set; }
 
 
-		public GameService()
-		{
+        public GameService()
+        {
 
-			Running = true;
-			GamePlaying = true;
+            Running = true;
+            GamePlaying = true;
 
-			MainMenu = BuildMainMenu();
-		}
+            MainMenu = BuildMainMenu();
+        }
             
 #region MainMenu      
-        	   Menui BuildMainMenu()
-		{
-			return new Menui("Game Main Menu", new List<MenuOption>
-			{
-				new MenuOption (GameMenuSelection,"Find The Ring"),
+               Menui BuildMainMenu()
+        {
+            return new Menui("Game Main Menu", new List<MenuOption>
+            {
+                new MenuOption (GameMenuSelection,"Find The Ring"),
                 
-				new MenuOption (ExitGame, "Close the Game")
+                new MenuOption (ExitGame, "Close the Game")
 
-			});
-		}
-		public void MainMenuSelection()
-		{
-			Action choose = MainMenu.Select();
-			if (choose!= null )
-			{
-				choose.Invoke();
-			}
-		}
+            });
+        }
+        public void MainMenuSelection()
+        {
+            Console.Clear();
+            Action choose = MainMenu.Select();
+            if (choose!= null )
+            {
+                choose.Invoke();
+            }
+        }
 #endregion
-		 void BuildGameMenu()
+         void BuildGameMenu()
         {
              GameMenu =new Menui("Game Main Menu", new List<MenuOption>
             {
@@ -56,12 +57,12 @@ namespace GetThyRing
 
             });
         }                                                  
-		public void GameMenuSelection(){
-			Action action = GameMenu.Select();
-			if (action != null){
-				action.Invoke();
-			}
-		}    
+        public void GameMenuSelection(){
+            Action action = GameMenu.Select();
+            if (action != null){
+                action.Invoke();
+            }
+        }    
         
 
 
@@ -84,5 +85,5 @@ namespace GetThyRing
 
 
 
-	}
+    }
 }
