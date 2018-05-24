@@ -8,6 +8,7 @@ namespace GetThyRing
 {
 	public class GameService
 	{
+		private Menui MainMenu { get; set; }
 		private Menui GameMenu { get; set; }
 		private GameProvider _GameP = new GameProvider();
 		private int _itemiD { get; set; }
@@ -18,48 +19,66 @@ namespace GetThyRing
 
 		public GameService()
 		{
-            
+
 			Running = true;
 			GamePlaying = true;
 
-			GameMenu = BuildGameMenu();
+			MainMenu = BuildMainMenu();
 		}
             
-        
-
-	   Menui BuildGameMenu()
+#region MainMenu      
+        	   Menui BuildMainMenu()
 		{
 			return new Menui("Game Main Menu", new List<MenuOption>
 			{
-				new MenuOption (FirstLevel,"Find The Ring"),
+				new MenuOption (GameMenuSelection,"Find The Ring"),
                 
 				new MenuOption (ExitGame, "Close the Game")
 
 			});
 		}
-
-
-		private void ExitGame()
+		public void MainMenuSelection()
 		{
-			GamePlaying = false;
-			Console.Clear();
-            Console.WriteLine("You've closed the program");
-		}
-
-		private void FirstLevel()
-		{
-			Console.Clear();
-            Console.WriteLine("Your in room, it's quiet and cold.  ");
-		}
-        
-        public void LevelSelection ()
-		{
-			Action choose = GameMenu.Select();
+			Action choose = MainMenu.Select();
 			if (choose!= null )
 			{
 				choose.Invoke();
-            }
+			}
 		}
+#endregion
+		 void BuildGameMenu()
+        {
+             GameMenu =new Menui("Game Main Menu", new List<MenuOption>
+            {
+                new MenuOption (FirstLevel,"YourHEREADVBERGQWFRWG"),
+
+                new MenuOption (ExitGame, "Close the Game")
+
+            });
+        }                                                  
+		public void GameMenuSelection(){
+			Action action = GameMenu.Select();
+			if (action != null){
+				action.Invoke();
+			}
+		}    
+        
+
+
+
+        private void ExitGame()
+        {
+            GamePlaying = false;
+            Console.WriteLine("You've closed the program");
+            Console.Clear();
+        }
+
+        private void FirstLevel()
+        {
+            Console.Clear();
+            Console.WriteLine("Your in room, it's quiet and cold.  ");
+        }
+        
             
        
 

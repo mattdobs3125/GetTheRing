@@ -32,10 +32,10 @@ namespace AppLayer.Menu
 				Console.Clear();
 				Console.WriteLine("I dont know {0}",input);
 				return null;
-
+                
 			}
-			Console.Clear();
-			return Options[index - 1].Choose;
+            return Options[index - 1].Choose;
+            
 		}
 	
 	

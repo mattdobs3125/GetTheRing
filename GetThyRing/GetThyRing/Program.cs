@@ -11,7 +11,7 @@ namespace GetThyRing
 			GameService play = new GameService();
 
 			while (play.Running){
-				play.LevelSelection();
+				play.MainMenuSelection();
                
 			}
            
