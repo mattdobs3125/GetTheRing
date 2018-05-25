@@ -64,7 +64,10 @@ namespace GetThyRing
             }
         }    
         
-
+		void set (){
+			set = 
+				
+		}
 
 
         private void ExitGame()
