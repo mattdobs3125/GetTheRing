@@ -47,9 +47,9 @@ namespace GetThyRing
             }
         }
 #endregion
-         void BuildGameMenu()
+         Menui BuildGameMenu()
         {
-             GameMenu =new Menui("Game Main Menu", new List<MenuOption>
+             return new Menui("Game Main Menu", new List<MenuOption>
             {
                 new MenuOption (FirstLevel,"YourHEREADVBERGQWFRWG"),
 
@@ -58,17 +58,16 @@ namespace GetThyRing
             });
         }                                                  
         public void GameMenuSelection(){
-            Action action = GameMenu.Select();
-            if (action != null){
-                action.Invoke();
-            }
+			GamePlaying = true;
+			while(GamePlaying){Action choose = GameMenu.Select();
+                if (choose != null)
+                {
+                    choose.Invoke();
+                }}
+            
         }    
         
-		void set (){
-			set = 
-				
-		}
-
+	      
 
         private void ExitGame()
         {
