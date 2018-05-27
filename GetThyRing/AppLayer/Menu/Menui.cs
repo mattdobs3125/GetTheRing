@@ -14,9 +14,9 @@ namespace AppLayer.Menu
             Options = options;
         }
 		void PrintGameOption(){
-			int count = 1;
+			//int count = 1;
 			foreach (var options in Options ){
-				Console.WriteLine($"{count++} {options.Des}");
+				Console.WriteLine($"{options.Des}");
 			}
 		}
 

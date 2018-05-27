@@ -10,6 +10,7 @@ namespace GetThyRing
     {
         private Menui MainMenu { get; set; }
         private Menui GameMenu { get; set; }
+		private Menui SecondLevel { get; set; }
         private GameProvider _GameP = new GameProvider();
         private int _itemiD { get; set; }
         private bool GamePlaying { get; set; }
@@ -24,6 +25,7 @@ namespace GetThyRing
             GamePlaying = true;
 
             MainMenu = BuildMainMenu();
+			GameMenu = BuildGameMenu();
         }
             
 #region MainMenu      
@@ -51,8 +53,15 @@ namespace GetThyRing
         {
              return new Menui("Game Main Menu", new List<MenuOption>
             {
-                new MenuOption (FirstLevel,"YourHEREADVBERGQWFRWG"),
+				new MenuOption (FirstLevel,"Your in room, it's quiet and cold."),
+				new MenuOption (Blank, @"                              
+                
 
+
+
+
+
+                                                                                 "),
                 new MenuOption (ExitGame, "Close the Game")
 
             });
@@ -82,7 +91,9 @@ namespace GetThyRing
             Console.WriteLine("Your in room, it's quiet and cold.  ");
         }
         
-            
+		private void Blank(){
+			
+		}     
        
 
 
