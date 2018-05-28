@@ -20,7 +20,7 @@ namespace GetThyRing
 
         public GameService()
         {
-
+            
             Running = true;
             GamePlaying = true;
 
@@ -48,17 +48,18 @@ namespace GetThyRing
                 choose.Invoke();
             }
         }
-#endregion
-         Menui BuildGameMenu()
+		#endregion
+#region FirstLevel Menu
+		Menui BuildGameMenu()
         {
              return new Menui("Game Main Menu", new List<MenuOption>
             {
-				new MenuOption (FirstLevel,"Your in room, it's quiet and cold."),
+				new MenuOption (FirstLevel,"Your in room, it's quiet and cold.Theres a Sword and a Ring on the table "),
 				new MenuOption (Blank, @"                              
                 
 
 
-
+                                          
 
 
                                                                                  "),
@@ -76,8 +77,10 @@ namespace GetThyRing
             
         }    
         
-	      
-
+		#endregion	      
+		//Menui BuildSecondLevel(){
+		//	return new Menui ("Sec")
+		//}
         private void ExitGame()
         {
             GamePlaying = false;
