@@ -6,11 +6,11 @@ namespace AppLayer.Menu
 {
     public class Menui
     {
-        private string Name { get; set; }
+        
         private List <MenuOption>  Options { get; set; }
-        public Menui(string name , List<MenuOption>options)
+        public Menui( List<MenuOption>options)
         {
-            Name = name;
+           
             Options = options;
         }
 		void PrintGameOption(){
@@ -34,7 +34,7 @@ namespace AppLayer.Menu
 				return null;
                 
 			}
-            return Options[index - 1].Choose;
+            return Options[index - 1].Choice;
             
 		}
 	

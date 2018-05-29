@@ -3,6 +3,7 @@
 using AppLayer.Menu;
 using System.Collections.Generic;
 using System;
+using DataLayer1.Items;
 
 namespace GetThyRing
 {
@@ -11,10 +12,11 @@ namespace GetThyRing
         private Menui MainMenu { get; set; }
         private Menui GameMenu { get; set; }
 		private Menui SecondLevel { get; set; }
+		private Iventory _Inven { get; set; }
         private GameProvider _GameP = new GameProvider();
         private int _itemiD { get; set; }
         private bool GamePlaying { get; set; }
-
+        
         public bool Running { get;  set; }
 
 
@@ -26,12 +28,13 @@ namespace GetThyRing
 
             MainMenu = BuildMainMenu();
 			GameMenu = BuildGameMenu();
+			SecondLevel = BuildSecondLevel();
         }
             
 #region MainMenu      
                Menui BuildMainMenu()
         {
-            return new Menui("Game Main Menu", new List<MenuOption>
+            return new Menui( new List<MenuOption>
             {
                 new MenuOption (GameMenuSelection,"Find The Ring"),
                 
@@ -52,7 +55,7 @@ namespace GetThyRing
 #region FirstLevel Menu
 		Menui BuildGameMenu()
         {
-             return new Menui("Game Main Menu", new List<MenuOption>
+             return new Menui( new List<MenuOption>
             {
 				new MenuOption (FirstLevel,"Your in room, it's quiet and cold.Theres a Sword and a Ring on the table "),
 				new MenuOption (Blank, @"                              
@@ -63,11 +66,19 @@ namespace GetThyRing
 
 
                                                                                  "),
+				//new MenuOption (_Inven.ShowIventory , "Enter 3 to open your Iventory"),
                 new MenuOption (ExitGame, "Close the Game")
 
             });
-        }                                                  
-        public void GameMenuSelection(){
+        }
+
+  //      public void LookAtInventory() 
+		//{
+		//	LookAtIventory = _Inven.ShowIventory();
+			
+		//}
+
+		public void GameMenuSelection(){
 			GamePlaying = true;
 			while(GamePlaying){Action choose = GameMenu.Select();
                 if (choose != null)
@@ -75,12 +86,20 @@ namespace GetThyRing
                     choose.Invoke();
                 }}
             
-        }    
-        
-		#endregion	      
-		//Menui BuildSecondLevel(){
-		//	return new Menui ("Sec")
-		//}
+        }
+
+		#endregion
+		Menui BuildSecondLevel()
+		{
+			return new Menui(new List<MenuOption>
+			{
+				new MenuOption(Blank,"nothing")
+			});
+		}
+		public void SecondLevelSelect(){
+			
+		}
+
         private void ExitGame()
         {
             GamePlaying = false;
@@ -95,7 +114,7 @@ namespace GetThyRing
         }
         
 		private void Blank(){
-			
+			Console.WriteLine("g");
 		}     
        
 

@@ -6,11 +6,11 @@ namespace AppLayer.Menu
 {
     public class MenuOption
     {
-        public Action Choose { get; set; }
+        public Action Choice { get; set; }
         public string Des { get; set; }
-        public MenuOption(Action choose, string des)
+        public MenuOption(Action choice, string des)
         {
-            Choose = choose;
+            Choice = choice;
 			Des = des;
             
         }

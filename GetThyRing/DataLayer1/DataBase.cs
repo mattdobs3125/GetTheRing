@@ -13,9 +13,9 @@ namespace DataLayer1
     {
 
 
-        public Item ring = new Item("The tool of the great one!!",1);
-		public Item book = new Item("not what a hero uses ", 2);
-		Item sword = new Item("Its dangerous to go alone!!!\nTake this", 1);
+		public Item ring = new Item( "The One Ring to rule them all", 1);
+
+		public Item sword = new Item("Its dangerous to go alone!!!\nTake this", 1);
 
        
 
