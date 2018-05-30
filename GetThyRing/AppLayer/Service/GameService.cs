@@ -4,6 +4,7 @@ using AppLayer.Menu;
 using System.Collections.Generic;
 using System;
 using DataLayer1.Items;
+using DataLayer1;
 
 namespace GetThyRing
 {
@@ -58,37 +59,52 @@ namespace GetThyRing
              return new Menui( new List<MenuOption>
             {
 				new MenuOption (FirstLevel,"Your in room, it's quiet and cold.Theres a Sword and a Ring on the table "),
-				new MenuOption (Blank, @"                              
+				//new MenuOption (Blank, @"                              
                 
 
 
                                           
 
 
-                                                                                 "),
-				//new MenuOption (_Inven.ShowIventory , "Enter 3 to open your Iventory"),
+                                                                                 //"),
+				new MenuOption (ShowIventory, "Enter 3 to open your Iventory"),
                 new MenuOption (ExitGame, "Close the Game")
 
             });
         }
 
-  //      public void LookAtInventory() 
-		//{
-		//	LookAtIventory = _Inven.ShowIventory();
-			
-		//}
-
+ 
 		public void GameMenuSelection(){
 			GamePlaying = true;
 			while(GamePlaying){Action choose = GameMenu.Select();
-                if (choose != null)
-                {
-                    choose.Invoke();
-                }}
-            
-        }
+				if (choose != null)
+				{
+					choose.Invoke();
+				}}
+			
+		}
 
 		#endregion
+        public List<Item> PickedUpItem = new List<Item>(); 
+        public List<Item> P = new List<Item>();
+        public void ShowIventory()
+        {
+			foreach (var o in PickedUpItem)
+			{
+				if (PickedUpItem == P)
+				{
+					Console.WriteLine("Theres nothing in the bag");
+				}
+				else
+				{
+					Console.WriteLine(o);
+				}
+			}
+		}
+                    
+
+
+
 		Menui BuildSecondLevel()
 		{
 			return new Menui(new List<MenuOption>
