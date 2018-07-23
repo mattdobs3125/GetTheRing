@@ -67,14 +67,19 @@ namespace GetThyRing
 
 
                                                                                  //"),
-				new MenuOption (ShowIventory, "Enter 3 to open your Iventory"),
+                new MenuOption (AddSword, "Enter 3 to Add the Mighty Sword to your inventory 2"),
+                new MenuOption (ShowIventory, "Enter 4 to open your Iventory"),
                 new MenuOption (ExitGame, "Close the Game")
 
             });
         }
 
- 
-		public void GameMenuSelection(){
+        private void AddSword()
+        {
+            
+        }
+
+        public void GameMenuSelection(){
 			GamePlaying = true;
 			while(GamePlaying){Action choose = GameMenu.Select();
 				if (choose != null)
@@ -91,7 +96,7 @@ namespace GetThyRing
         {
 			foreach (var o in PickedUpItem)
 			{
-				if (PickedUpItem == P)
+                if (PickedUpItem.Count == P.Count)
 				{
 					Console.WriteLine("Theres nothing in the bag");
 				}
